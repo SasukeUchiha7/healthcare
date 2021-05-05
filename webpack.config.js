@@ -25,13 +25,18 @@ module.exports = (env) => {
         },
         module: {
             rules: [{
-                loader: 'babel',
-                test: /\.es6$/,
+                loader: 'babel-loader',
+                test: /\.js$/,
                 exclude: /node_modules/,
-                query: {
-                    presets: ["es2015"],
-                },
+                options: {
+                    presets: ['env', 'react']
+                }
             },
+              {
+                  test: /\.js$/,
+                  loader: 'babel-loader',
+                  enforce: 'pre'
+               },
              // { // css rules
             //     test: /\.css$/, 
             //     use: [  // use helps in creating array of loader
@@ -65,6 +70,9 @@ module.exports = (env) => {
                     ]
                 })
             }]
+        },
+        resolve: {
+            extensions: ['.js', '.jsx']
         },
         plugins: [
             CSSExtract,
