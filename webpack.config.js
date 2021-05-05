@@ -25,8 +25,8 @@ module.exports = (env) => {
         },
         module: {
             rules: [{
-                loader: 'babel-loader',
-                test: /\.js$/,
+                loader: 'babel',
+                test: /\.es6$/,
                 exclude: /node_modules/,
                 query: {
                     presets: ["es2015"],
