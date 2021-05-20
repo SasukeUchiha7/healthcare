@@ -67,9 +67,6 @@ module.exports = (env) => {
         },
       ],
     },
-    resolve: {
-      extensions: [".js", ".jsx"],
-    },
     plugins: [
       CSSExtract,
       new webpack.DefinePlugin({
