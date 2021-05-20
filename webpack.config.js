@@ -29,11 +29,6 @@ module.exports = (env) => {
                 test: /\.js$/,
                 exclude: /node_modules/,
             },
-              {
-                  test: /\.js$/,
-                  loader: 'babel-loader',
-                  enforce: 'pre'
-               },
              // { // css rules
             //     test: /\.css$/, 
             //     use: [  // use helps in creating array of loader
