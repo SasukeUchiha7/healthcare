@@ -28,9 +28,6 @@ module.exports = (env) => {
                 loader: 'babel-loader',
                 test: /\.js$/,
                 exclude: /node_modules/,
-                options: {
-                    presets: ['env', 'react']
-                }
             },
               {
                   test: /\.js$/,
